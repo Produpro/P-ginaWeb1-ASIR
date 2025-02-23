@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiberGuards</title>
+    <link rel="stylesheet" href="../CSS/Pagina.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../IMG/logo.jpg" alt="Logo CiberGuards">
+            <h1>CiberGuards</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="Principal.html">Inicio</a></li>
+                <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
+                <li><a href="Cursos.html">Cursos</a></li>
+            </ul>
+        </nav>
+
+        <div class="botonesheader">
+            <a href="login.html" class="login">Iniciar sesión</a>
+            <a href="registro.html" class="botonregistro">Registrarse</a>
+        </div>
+    </header>        
+        
+	<section>
+		<div class="bienvenida">
+            <h2>Bienvenido a CiberGuards</h2>
+            <p>Aprende sobre ciberseguridad con nuestros cursos y recursos exclusivos.</p>
+        </div>
+       
+        <div class="contenedor_imagenes">        
+            <div class="division_fotos">
+			
+                <div class="fotos">
+                    <div class="foto">
+						<a href="https://cybersecuritynews.es/ciberdelincuencia-una-amenaza-multifacetica-para-la-seguridad-nacional/">
+							<img src="../IMG/noticia1.jpg" alt="Noticia 1">							
+								<div>							
+									<h3>Ciberdelincuencia: una amenaza multifacética para la seguridad nacional:</h3><br>
+									<p>Google Threat Intelligence Group ha presentado esta semana, como antesala de la celebración del Munich Security Conference,</p><br>
+								</div>
+                         </a>								
+                    </div>				
+					<div class="foto">
+						<a href="https://cybersecuritynews.es/las-certificaciones-en-ciberseguridad-mas-demandadas-en-2025-y-su-importancia-en-un-mundo-digitalmente-seguro/">
+							<img src="../IMG/noticia2.jpg" alt="Noticia 2">							
+								<div>							
+									<h3>Las certificaciones en ciberseguridad más demandadas en 2025:</h3><br>
+									<p>En un mundo donde los ciberataques crecen en frecuencia y sofisticación, la ciberseguridad se ha convertido en una prioridad absoluta para empresas y gobiernos.</p><br>
+								</div>
+                         </a>								
+                    </div>
+					<div class="foto">
+						<a href="https://cybersecuritynews.es/tres-consecuencias-de-un-ciberataque-deepfake-en-una-empresa/">
+							<img src="../IMG/noticia3.jpg" alt="Noticia 3">							
+								<div>							
+									<h3>Tres consecuencias de un ciberataque deepfake en una empresa:</h3><br>
+									<p>Los deepfakes se están convirtiendo, en los últimos años, en una de las mayores ciberamenazas. A medida que avanza la inteligencia artificial, la desinformación digital difumina las fronteras entre realidad y ficción. Tan solo hay que echar un vistazo a lo que ocurrió a lo largo de 2024.</p><br>
+								</div>
+                         </a>								
+                    </div>
+					<div class="foto">
+						<a href="https://cybersecuritynews.es/el-83-de-los-expertos-de-ti-en-espana-preve-un-aumento-de-ciberataques-impulsados-por-ia/">
+							<img src="../IMG/noticia4.jpg" alt="Noticia 4">							
+								<div>							
+									<h3>El 83% de los expertos de TI en España prevé un aumento de ciberataques impulsados por IA:</h3><br>
+									<p>En su estudio ‘Ciberdefensa e IA: ¿Estás listo para proteger tu organización?’, Kaspersky recopila perspectivas de profesionales de TI y Seguridad de la Información en pequeñas y medianas empresas (pymes) y grandes corporaciones.</p><br>
+								</div>
+                         </a>								
+                    </div>
+					<div class="foto">
+						<a href="https://cybersecuritynews.es/fakeupdates-lidera-las-amenazas-y-facilita-los-ataques-de-ransomware/">
+							<img src="../IMG/noticia5.jpg" alt="Noticia 5">							
+								<div>							
+									<h3>FakeUpdates lidera las amenazas y facilita los ataques de ransomware:</h3><br>
+									<p>Check Point Research, la división de Inteligencia de Amenazas Check Point® Software Technologies Ltd., empresa global en soluciones de ciberseguridad, ha publicado su Índice Global de Amenazas correspondiente a enero de 2025.</p><br>
+								</div>
+                         </a>								
+                    </div>
+					<div class="foto">
+						<a href="https://cybersecuritynews.es/el-fraude-financiero-y-las-brechas-de-datos-supusieron-el-48-de-los-incidentes-ciber-en-2023/">
+							<img src="../IMG/noticia6.jpg" alt="Noticia 6">							
+								<div>							
+									<h3>El fraude financiero y las brechas de datos supusieron el 48% de los incidentes ciber en 2023:</h3><br>
+									<p>La ciberamenaza tiene hoy un objetivo claro, tratar de poner en jaque los elementos más valiosos de las empresas de cualquier tamaño o envergadura, es decir, su viabilidad económica e información crítica.</p><br>
+								</div>
+                         </a>								
+                    </div>                  
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <footer>
+        <p>Krisztian Pataj - &copy; 2025 CiberGuards</p>
+    </footer>
+
+    
+	<script>
+	
+		let noticias = document.getElementsByClassName('foto');
+		const numnoticias = noticias.length;
+		const visibles = 3; // Número de imágenes visibles
+		let inicio = 0; // Índice de la primera imagen visible
+
+		// Ocultar todas las imágenes excepto las 3 primeras
+		for (i = visibles; i < numnoticias; i++) {
+			noticias[i].style.display = 'none';
+		}
+
+		function pasarNoticias() {
+			// Ocultar la primera imagen visible
+			noticias[inicio].style.display = 'none';
+
+			// Calcular el nuevo índice de inicio
+			inicio = (inicio + 1) % numnoticias;
+
+			// Si llega al final, reinicia el ciclo
+			if (inicio + visibles > numnoticias) {
+				inicio = 0;
+			}
+
+			// Mostrar las nuevas imágenes
+			for (i = 0; i < numnoticias; i++) {
+				noticias[i].style.display = (i >= inicio && i < inicio + visibles) ? '' : 'none';
+			}
+		}
+
+		// Configurar el temporizador para cambiar cada 2 segundos y medio
+		setInterval(pasarNoticias, 2500);
+
+	
+   </script>
+</body>
+</html>
